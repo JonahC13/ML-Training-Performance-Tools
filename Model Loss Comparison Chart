@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 import torch
 import re
 from natsort import natsorted
+import os
+import shutil
 
 
 # MAKE SURE TO CHANGE EXPERIMENT NAME TO MOST RECENT BEFORE RUNNING OR IT WILL OVERWRITE
@@ -19,6 +21,9 @@ experiments_dir = ''
 # Name of folder containing most recent training files
 recent_training_folder_path = ''
 
+# Input necessary information about model training session
+num_epochs = 10000
+checkpoint = 1000
 
 # Define loss metric
 loss_function=torch.nn.MSELoss(reduction='mean')
